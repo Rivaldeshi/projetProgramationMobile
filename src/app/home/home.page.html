@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculatrice
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+
+    <div class="ecran">
+      <div class="operation"> {{opera}}</div>
+      <div class="resultat"> {{resultat}}</div>
+    </div>
+
+    <div class="buttons-container">
+
+      <div class="left-div">
+        <div class="button-row">
+          <div class="btn" (click)="saisir(7)"> 7 </div>
+          <div class="btn" (click)="saisir(8)"> 8 </div>
+          <div class="btn" (click)="saisir(9)"> 9 </div>
+        </div>
+
+        <div class="button-row">
+          <div class="btn" (click)="saisir(4)"> 4 </div>
+          <div class="btn" (click)="saisir(5)"> 5 </div>
+          <div class="btn" (click)="saisir(6)"> 6 </div>
+        </div>
+        <div class="button-row">
+          <div class="btn" (click)="saisir(1)"> 1 </div>
+          <div class="btn" (click)="saisir(2)"> 2 </div>
+          <div class="btn" (click)="saisir(3)"> 3 </div>
+        </div>
+        <div class="button-row">
+          <div class="btn" (click)="saisir('.')"> . </div>
+          <div class="btn" (click)="saisir(0)"> 0 </div>
+          <div class="btn" (click)="egale()"> = </div>
+        </div>
+      </div>
+
+      <div class="button-col">
+        <div class="btn" (click)="effacer()"> <ion-icon  name="backspace-outline"></ion-icon> </div>
+        <div class="btn" (click)="saisir('/')"> / </div>
+        <div class="btn" (click)="saisir('*')"> X </div>
+        <div class="btn" (click)="saisir('-')"> - </div>
+        <div class="btn" (click)="saisir('+')"> + </div>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>
