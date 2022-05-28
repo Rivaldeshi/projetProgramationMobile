@@ -60,8 +60,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: all 0.3s ease-in-out;
 }
+
+.btn.l:active {
+  background:#E0B612;
+  border-radius: 50%;
+}
+
+.btn.c:active{
+  background: #555 !important;
+  border-radius: 50%;
+}
+
+
 
 .button-col .btn{
   font-size: 30px;
