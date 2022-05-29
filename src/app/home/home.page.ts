@@ -9,7 +9,6 @@ export class HomePage implements OnInit {
 
 
   public opera = '';
-  public resultat = '';
 
   constructor() { }
 
@@ -18,22 +17,8 @@ export class HomePage implements OnInit {
 
   effacer(): void {
     this.opera = '';
-    this.resultat = '';
   }
 
-  effacer1(): void {
-
-    if (this.opera === ERROR) {
-      this.opera = '';
-    }
-
-    try {
-      // eslint-disable-next-line no-eval
-      this.opera = this.opera.slice(0, -1);
-    } catch {
-      this.opera = ERROR;
-    }
-  }
 
   egale(): void {
     try {
@@ -43,7 +28,6 @@ export class HomePage implements OnInit {
     } catch {
       this.opera = ERROR;
     }
-    this.resultat = '';
   }
 
   saisir(n: any): void {
@@ -55,14 +39,6 @@ export class HomePage implements OnInit {
       this.opera = '';
     }
     this.opera += n;
-
-    try {
-
-      // eslint-disable-next-line no-eval
-      this.resultat = eval(this.opera);
-    } catch {
-      this.resultat = '';
-    }
   }
 
 

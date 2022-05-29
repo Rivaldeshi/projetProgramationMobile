@@ -1,46 +1,42 @@
 <ion-content [fullscreen]="true">
   <div id="container">
-
     <div class="ecran">
-      <div class="operation"> {{opera}}</div>
-      <div class="resultat"> {{resultat}}</div>
+      <P> {{opera}}</P>
     </div>
 
     <div class="buttons-container">
 
-      <div class="left-div">
-        <div class="button-row">
-          <div class="btn c" (click)="saisir(7)"> 7 </div>
-          <div class="btn c" (click)="saisir(8)"> 8 </div>
-          <div class="btn c" (click)="saisir(9)"> 9 </div>
-        </div>
-
-        <div class="button-row">
-          <div class="btn c" (click)="saisir(4)"> 4 </div>
-          <div class="btn c" (click)="saisir(5)"> 5 </div>
-          <div class="btn c" (click)="saisir(6)"> 6 </div>
-        </div>
-        <div class="button-row">
-          <div class="btn c" (click)="saisir(1)"> 1 </div>
-          <div class="btn c" (click)="saisir(2)"> 2 </div>
-          <div class="btn c" (click)="saisir(3)"> 3 </div>
-        </div>
-        <div class="button-row">
-          <div class="btn c" (click)="saisir('.')"> . </div>
-          <div class="btn c" (click)="saisir(0)"> 0 </div>
-          <div class="btn c" (click)="egale()"> = </div>
-        </div>
+      <div class="button-row">
+        <ion-button class="btn" (click)="saisir(1)"> 1 </ion-button>
+        <ion-button class="btn" (click)="saisir(2)"> 2 </ion-button>
+        <ion-button class="btn" (click)="saisir(3)"> 3 </ion-button>
+        <ion-button class="btn" (click)="saisir('+')"> + </ion-button>
       </div>
 
-      <div class="button-col">
-        <div class="btn l" (click)="effacer()"> <ion-icon  name="backspace-outline"></ion-icon> </div>
-        <div class="btn l" (click)="saisir('/')"> / </div>
-        <div class="btn l" (click)="saisir('*')"> X </div>
-        <div class="btn l" (click)="saisir('-')"> - </div>
-        <div class="btn l" (click)="saisir('+')"> + </div>
+      <div class="button-row">
+        <ion-button class="btn" (click)="saisir(4)"> 4 </ion-button>
+        <ion-button class="btn" (click)="saisir(5)"> 5 </ion-button>
+        <ion-button class="btn" (click)="saisir(6)"> 6 </ion-button>
+        <ion-button class="btn" (click)="saisir('-')"> - </ion-button>
+      </div>
+      <div class="button-row">
+        <ion-button class="btn" (click)="saisir(7)"> 7 </ion-button>
+        <ion-button class="btn" (click)="saisir(8)"> 8 </ion-button>
+        <ion-button class="btn" (click)="saisir(9)"> 9 </ion-button>
+        <ion-button class="btn" (click)="saisir('*')"> x </ion-button>
       </div>
 
+      <div class="button-row">
+        <ion-button class="btn" (click)="saisir('.')"> . </ion-button>
+        <ion-button class="btn" (click)="saisir(0)"> 0 </ion-button>
+        <ion-button class="btn" (click)="effacer()"> c </ion-button>
+        <ion-button class="btn" (click)="saisir('/')">
+          / </ion-button>
+      </div>
+
+      <div class="button-row">
+        <ion-button class="egale" (click)="egale()"> = </ion-button>
+      </div>
     </div>
-
   </div>
 </ion-content>
